@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // API Configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = "https://wcapi.irc-enter.tech/api";
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
