@@ -16,7 +16,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /main .
 # Stage 2: Create a minimal production image
 FROM alpine:latest
 
-WORKDIR /root/
+WORKDIR /app/
 
 # Copy the compiled binary from the builder stage
 COPY --from=builder /main .
