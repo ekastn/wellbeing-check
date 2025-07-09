@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3001:3001"
+    networks:
+      - wellbeing-net
+
+  frontend:
+    build:
+      context: ./well
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - wellbeing-net
+
+networks:
+  wellbeing-net:
+    driver: bridge
